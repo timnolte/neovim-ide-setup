@@ -4,6 +4,20 @@ call plug#begin('~/.local/share/nvim/bundle')
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'javascript.jsx'] }
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-fugitive'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'scrooloose/nerdtree'
+Plug 'airblade/vim-gitgutter'
+Plug 'gregsexton/MatchTag', { 'for': ['html', 'javascript.jsx'] }
+Plug 'sheerun/vim-polyglot'
+Plug 'joshdick/onedark.vim'
+Plug 'Shougo/deoplete.nvim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 " Initialize plugin system
 call plug#end()
