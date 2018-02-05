@@ -14,7 +14,12 @@ Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'gregsexton/MatchTag', { 'for': ['html', 'javascript.jsx'] }
 Plug 'sheerun/vim-polyglot'
+Plug 'crusoexia/vim-monokai'
+Plug 'tomasr/molokai'
+" Plug 'fmoralesc/molokayo'
+" Plug 'romainl/flattened'
 Plug 'joshdick/onedark.vim'
+Plug 'rakr/vim-one'
 Plug 'Shougo/deoplete.nvim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -29,9 +34,24 @@ filetype plugin indent on                                                       
 
 let g:mapleader = ","                                                           "Change leader to a comma
 
-let g:onedark_terminal_italics = 1                                              "Enable italic font
+"Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
+"(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
+if (has("nvim"))
+  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+"For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
+"Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
+" < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+if (has("termguicolors"))
+  set termguicolors
+endif
 
-set termguicolors
+syntax on                                                                       "turn on syntax highlighting
+colorscheme monokai
+let g:airline_theme='molokai'
+" set background=dark                                                             "Set background to dark
+
 set title                                                                       "change the terminal's title
 set number                                                                      "Line numbers are good
 set relativenumber                                                              "Show numbers relative to current line
@@ -53,7 +73,6 @@ set linebreak                                                                   
 set listchars=tab:\ \ ,trail:·                                                  "Set trails for tabs and spaces
 set list                                                                        "Enable listchars
 set lazyredraw                                                                  "Do not redraw on registers and macros
-set background=dark                                                             "Set background to dark
 set hidden                                                                      "Hide buffers in background
 set conceallevel=2 concealcursor=i                                              "neosnippets conceal marker
 set splitright                                                                  "Set up new vertical splits positions
@@ -64,8 +83,6 @@ set fillchars+=vert:\│                                                        
 set pumheight=30                                                                "Maximum number of entries in autocomplete popup
 set exrc                                                                        "Allow using local vimrc
 set secure                                                                      "Forbid autocmd in local vimrc
-
-syntax on                                                                       "turn on syntax highlighting
 
 " }}}
 " ================ Indentation ====================== {{{
