@@ -14,12 +14,16 @@ Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'gregsexton/MatchTag', { 'for': ['html', 'javascript.jsx'] }
 Plug 'sheerun/vim-polyglot'
+" Color Schemes {{{
 Plug 'crusoexia/vim-monokai'
 Plug 'tomasr/molokai'
-" Plug 'fmoralesc/molokayo'
-" Plug 'romainl/flattened'
-Plug 'joshdick/onedark.vim'
-Plug 'rakr/vim-one'
+"Plug 'fmoralesc/molokayo'
+"Plug 'romainl/flattened'
+"Plug 'dikiaap/minimalist'
+"Plug 'joshdick/onedark.vim'
+"Plug 'rakr/vim-one'
+"Plug 'KeitaNakamura/neodark.vim'
+"}}}
 Plug 'Shougo/deoplete.nvim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -48,14 +52,15 @@ if (has("termguicolors"))
 endif
 
 syntax on                                                                       "turn on syntax highlighting
-colorscheme monokai
+"set background=dark                                                             "Set background to dark
+colorscheme molokai
 let g:airline_theme='molokai'
-" set background=dark                                                             "Set background to dark
 
 set title                                                                       "change the terminal's title
 set number                                                                      "Line numbers are good
 set relativenumber                                                              "Show numbers relative to current line
-set history=500                                                                 "Store lots of :cmdline history
+set history=1024                                                                "Store lots of :cmdline history
+set undolevels=2048                                                             "Allow for undo beyond history
 set showcmd                                                                     "Show incomplete cmds down the bottom
 set noshowmode                                                                  "Hide showmode because of the powerline plugin
 set gdefault                                                                    "Set global flag for search and replace
@@ -68,6 +73,7 @@ set showmatch                                                                   
 set nostartofline                                                               "Jump to first non-blank character
 set timeoutlen=1000 ttimeoutlen=0                                               "Reduce Command timeout for faster escape and O
 set fileencoding=utf-8                                                          "Set utf-8 encoding on write
+set fileformats=unix,mac,dos                                                    "Set Unix line-endings for new files
 set wrap                                                                        "Enable word wrap
 set linebreak                                                                   "Wrap lines at convenient points
 set listchars=tab:\ \ ,trail:·                                                  "Set trails for tabs and spaces
