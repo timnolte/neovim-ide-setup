@@ -17,6 +17,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'gregsexton/MatchTag', { 'for': ['html', 'javascript.jsx'] }
 Plug '2072/PHP-Indenting-for-VIm'
 Plug 'rayburgemeestre/phpfolding.vim'
+Plug 'Shougo/deoplete.nvim'
+Plug 'padawan-php/deoplete-padawan', { 'do': 'composer install' }
 Plug 'Rican7/php-doc-modded'
 Plug 'sheerun/vim-polyglot'
 " Color Schemes {{{
@@ -29,7 +31,6 @@ Plug 'tomasr/molokai'
 "Plug 'rakr/vim-one'
 "Plug 'KeitaNakamura/neodark.vim'
 "}}}
-Plug 'Shougo/deoplete.nvim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
