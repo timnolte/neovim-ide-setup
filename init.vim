@@ -14,6 +14,7 @@ Plug 'tpope/vim-git'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'gregsexton/MatchTag', { 'for': ['html', 'javascript.jsx'] }
 Plug '2072/PHP-Indenting-for-VIm'
 Plug 'rayburgemeestre/phpfolding.vim'
