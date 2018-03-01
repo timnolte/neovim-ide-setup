@@ -17,7 +17,12 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'gregsexton/MatchTag', { 'for': ['html', 'javascript.jsx'] }
 Plug '2072/PHP-Indenting-for-VIm'
-Plug 'rayburgemeestre/phpfolding.vim'
+" There are errors when using phpfolding.vim, the plugin hasn't been updated
+" in 2 years.
+"Plug 'rayburgemeestre/phpfolding.vim'
+" The phpfold plugin is newer but dies and causes major vim/nvim usability
+" issues. May not be compatible with nvim.
+"Plug 'lvht/phpfold.vim', { 'for': 'php' }
 Plug 'Shougo/deoplete.nvim'
 Plug 'padawan-php/deoplete-padawan', { 'do': 'composer install' }
 Plug 'Rican7/php-doc-modded'
