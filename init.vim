@@ -4,6 +4,17 @@ call plug#begin('~/.local/share/nvim/bundle')
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+" Color Schemes {{{
+Plug 'crusoexia/vim-monokai'
+Plug 'tomasr/molokai'
+"Plug 'fmoralesc/molokayo'
+"Plug 'romainl/flattened'
+"Plug 'dikiaap/minimalist'
+"Plug 'joshdick/onedark.vim'
+"Plug 'rakr/vim-one'
+"Plug 'KeitaNakamura/neodark.vim'
+"}}}
+Plug 'neomake/neomake'
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'javascript.jsx'] }
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
@@ -16,27 +27,21 @@ Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'gregsexton/MatchTag', { 'for': ['html', 'javascript.jsx'] }
-Plug '2072/PHP-Indenting-for-VIm'
+" PHP Support Plugins {{{
+Plug 'StanAngeloff/php.vim'
 " There are errors when using phpfolding.vim, the plugin hasn't been updated
 " in 2 years.
-"Plug 'rayburgemeestre/phpfolding.vim'
+Plug 'rayburgemeestre/phpfolding.vim'
 " The phpfold plugin is newer but dies and causes major vim/nvim usability
 " issues. May not be compatible with nvim.
 "Plug 'lvht/phpfold.vim', { 'for': 'php' }
+Plug '2072/PHP-Indenting-for-VIm'
 Plug 'Shougo/deoplete.nvim'
 Plug 'padawan-php/deoplete-padawan', { 'do': 'composer install' }
 Plug 'Rican7/php-doc-modded'
-Plug 'sheerun/vim-polyglot'
-" Color Schemes {{{
-Plug 'crusoexia/vim-monokai'
-Plug 'tomasr/molokai'
-"Plug 'fmoralesc/molokayo'
-"Plug 'romainl/flattened'
-"Plug 'dikiaap/minimalist'
-"Plug 'joshdick/onedark.vim'
-"Plug 'rakr/vim-one'
-"Plug 'KeitaNakamura/neodark.vim'
 "}}}
+Plug 'janko-m/vim-test'
+Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
@@ -135,6 +140,11 @@ set statusline+=\ %{gutentags#statusline('\│\ ')}                             
 set statusline+=\ %2*%{ALEGetStatusLine()}%*                                    "Errors count
 
 "}}}
+" ================ Plugin Setup ======================= {{{
+" make test commands execute using dispatch.vim
+let test#strategy = "neovim"
+
+" }}}
 " ================ Custom mappings ======================== {{{
 " " Copy to clipboard
 vnoremap  <leader>y  "+y
