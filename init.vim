@@ -22,9 +22,11 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-git'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-vinegar'
+"Plug 'Xuyuanp/nerdtree-git-plugin'
+"Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
+"Plug 'ryanoasis/vim-devicons'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'gregsexton/MatchTag', { 'for': ['html', 'javascript.jsx'] }
 " PHP Support Plugins {{{
@@ -70,9 +72,10 @@ endif
 
 syntax on                                                                       "turn on syntax highlighting
 "set background=dark                                                             "Set background to dark
-colorscheme molokai
-let g:airline_theme='molokai'
+colorscheme molokai                                                             "Set color scheme
+let g:airline_theme='molokai'                                                   "Set airline theme to match color schem
 
+"set guifont=SauceCodePro\ Nerd\ Font\ 11                                        "Set font
 set title                                                                       "change the terminal's title
 set number                                                                      "Line numbers are good
 set relativenumber                                                              "Show numbers relative to current line
@@ -91,6 +94,7 @@ set nostartofline                                                               
 set timeoutlen=1000 ttimeoutlen=0                                               "Reduce Command timeout for faster escape and O
 set fileencoding=utf-8                                                          "Set utf-8 encoding on write
 set fileformats=unix,mac,dos                                                    "Set Unix line-endings for new files
+set encoding=utf8                                                               "Set encoding
 set wrap                                                                        "Enable word wrap
 set linebreak                                                                   "Wrap lines at convenient points
 set listchars=tab:\ \ ,trail:·                                                  "Set trails for tabs and spaces
