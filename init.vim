@@ -41,6 +41,7 @@ Plug '2072/PHP-Indenting-for-VIm'
 Plug 'Shougo/deoplete.nvim'
 Plug 'padawan-php/deoplete-padawan', { 'do': 'composer install' }
 Plug 'Rican7/php-doc-modded'
+Plug 'phpstan/vim-phpstan'
 "}}}
 Plug 'janko-m/vim-test'
 Plug 'sheerun/vim-polyglot'
@@ -147,6 +148,8 @@ set statusline+=\ %2*%{ALEGetStatusLine()}%*                                    
 " ================ Plugin Setup ======================= {{{
 " make test commands execute using dispatch.vim
 let test#strategy = "neovim"
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
 
 " }}}
 " ================ Custom mappings ======================== {{{
