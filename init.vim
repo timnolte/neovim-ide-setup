@@ -29,8 +29,10 @@ Plug 'airblade/vim-gitgutter'
 "Plug 'ryanoasis/vim-devicons'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'gregsexton/MatchTag', { 'for': ['html', 'javascript.jsx'] }
+Plug 'vim-syntastic/syntastic'
 " PHP Support Plugins {{{
 Plug 'StanAngeloff/php.vim'
+"Plug 'stephpy/vim-php-cs-fixer'
 " There are errors when using phpfolding.vim, the plugin hasn't been updated
 " in 2 years.
 Plug 'rayburgemeestre/phpfolding.vim'
