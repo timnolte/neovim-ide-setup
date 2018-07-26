@@ -170,3 +170,6 @@ nnoremap <leader>p "+p
 nnoremap <leader>P "+P
 vnoremap <leader>p "+p
 vnoremap <leader>P "+P
+
+" " Insert real tab
+inoremap <S-Tab> <C-V><Tab>
