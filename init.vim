@@ -21,6 +21,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-vinegar'
 "Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -59,6 +60,7 @@ call plug#end()
 filetype plugin indent on                                                       "Enable plugins and indents by filetype
 
 let g:mapleader = ","                                                           "Change leader to a comma
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 "(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
@@ -152,6 +154,8 @@ set statusline+=\ %2*%{ALEGetStatusLine()}%*                                    
 let test#strategy = "neovim"
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
+" Setup Syntastic
+let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
 
 " }}}
 " ================ Custom mappings ======================== {{{
