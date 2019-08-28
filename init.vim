@@ -48,6 +48,7 @@ Plug 'phpstan/vim-phpstan'
 "}}}
 Plug 'janko-m/vim-test'
 Plug 'sheerun/vim-polyglot'
+Plug 'dense-analysis/ale'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
