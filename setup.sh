@@ -20,8 +20,10 @@ function setup() {
 		mkdir -p $font_dir
 		# begin installing font
 		echo 'installing fonts'
-		# download/install font
+		# download font
 		curl -# -fLo "$font_dir/$font_file" $font_url
+    # install font/rebuild font cache
+    fc-cache -f
 		echo "Fonts installed to $font_dir"
 	fi
 

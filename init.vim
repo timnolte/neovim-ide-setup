@@ -110,7 +110,7 @@ set listchars=tab:\ \ ,trail:·                                                 
 set list                                                                        "Enable listchars
 set lazyredraw                                                                  "Do not redraw on registers and macros
 set hidden                                                                      "Hide buffers in background
-set conceallevel=2 concealcursor=i                                              "neosnippets conceal marker
+set conceallevel=2 concealcursor=c                                              "neosnippets conceal marker
 set splitright                                                                  "Set up new vertical splits positions
 set splitbelow                                                                  "Set up new horizontal splits positions
 set path+=**                                                                    "Allow recursive search
