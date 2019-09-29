@@ -31,6 +31,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'gregsexton/MatchTag', { 'for': ['html', 'javascript.jsx'] }
 Plug 'vim-syntastic/syntastic'
+" Language Support Plugins {{{
+Plug 'Shougo/deoplete.nvim'
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh', }
+"}}}
 " PHP Support Plugins {{{
 Plug 'StanAngeloff/php.vim'
 "Plug 'stephpy/vim-php-cs-fixer'
@@ -41,8 +45,7 @@ Plug 'rayburgemeestre/phpfolding.vim'
 " issues. May not be compatible with nvim.
 "Plug 'lvht/phpfold.vim', { 'for': 'php' }
 Plug '2072/PHP-Indenting-for-VIm'
-Plug 'Shougo/deoplete.nvim'
-Plug 'padawan-php/deoplete-padawan', { 'do': 'composer install' }
+"Plug 'padawan-php/deoplete-padawan', { 'do': 'composer install' }
 Plug 'Rican7/php-doc-modded'
 Plug 'phpstan/vim-phpstan'
 "}}}
