@@ -28,7 +28,7 @@ Plug 'tpope/vim-vinegar'
 "Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
 "Plug 'ryanoasis/vim-devicons'
-Plug 'ludovicchabant/vim-gutentags'
+"Plug 'ludovicchabant/vim-gutentags'
 Plug 'gregsexton/MatchTag', { 'for': ['html', 'javascript.jsx'] }
 Plug 'vim-syntastic/syntastic'
 " PHP Support Plugins {{{
@@ -41,8 +41,9 @@ Plug 'rayburgemeestre/phpfolding.vim'
 " issues. May not be compatible with nvim.
 "Plug 'lvht/phpfold.vim', { 'for': 'php' }
 Plug '2072/PHP-Indenting-for-VIm'
-Plug 'Shougo/deoplete.nvim'
-Plug 'padawan-php/deoplete-padawan', { 'do': 'composer install' }
+"Plug 'Shougo/deoplete.nvim'
+"Plug 'padawan-php/deoplete-padawan', { 'do': 'composer install' }
+Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 Plug 'Rican7/php-doc-modded'
 Plug 'phpstan/vim-phpstan'
 "}}}
@@ -146,7 +147,7 @@ set statusline+=\ \│\ %y                                                      
 set statusline+=\ \│\ %p%%                                                      "Percentage
 set statusline+=\ \│\ %c                                                        "Column number
 set statusline+=\ \│\ %l/%L                                                     "Current line number/Total line numbers
-set statusline+=\ %{gutentags#statusline('\│\ ')}                               "Tags status
+"set statusline+=\ %{gutentags#statusline('\│\ ')}                               "Tags status
 set statusline+=\ %2*%{ALEGetStatusLine()}%*                                    "Errors count
 
 "}}}
@@ -154,9 +155,23 @@ set statusline+=\ %2*%{ALEGetStatusLine()}%*                                    
 " make test commands execute using dispatch.vim
 let test#strategy = "neovim"
 " Use deoplete.
-let g:deoplete#enable_at_startup = 1
+"let g:deoplete#enable_at_startup = 1
 " Setup Syntastic
 let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
+" Setup CoC
+" use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
+
+nnoremap <c-space>
+inoremap <silent><expr> <c-space> coc#refresh()
 
 " }}}
 " ================ Custom mappings ======================== {{{
