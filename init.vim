@@ -161,7 +161,15 @@ let test#strategy = "neovim"
 "let g:deoplete#enable_at_startup = 1
 " Setup Syntastic
 let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
-" Setup CoC
+" ================ Setup CoC ================== {{{
+" jsonc comment highlighting
+autocmd FileType json syntax match Comment +\/\/.\+$+
+" FileType mappings
+let g:coc_filetype_map = {
+      \ 'html.swig': 'html',
+      \ 'wxss': 'css',
+      \ 'xml.dist': 'xml',
+      \ }
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -175,7 +183,7 @@ inoremap <silent><expr> <Tab>
 
 nnoremap <c-space>
 inoremap <silent><expr> <c-space> coc#refresh()
-
+" }}}
 " }}}
 " ================ Custom mappings ======================== {{{
 " " Copy to clipboard
