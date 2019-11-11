@@ -27,6 +27,7 @@ Plug 'tpope/vim-vinegar'
 "Plug 'Xuyuanp/nerdtree-git-plugin'
 "Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
+Plug 'junegunn/gv.vim'
 "Plug 'ryanoasis/vim-devicons'
 "Plug 'ludovicchabant/vim-gutentags'
 Plug 'gregsexton/MatchTag', { 'for': ['html', 'javascript.jsx'] }
