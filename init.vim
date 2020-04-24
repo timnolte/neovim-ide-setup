@@ -182,7 +182,7 @@ inoremap <silent><expr> <Tab>
       \ <SID>check_back_space() ? "\<Tab>" :
       \ coc#refresh()
 
-nnoremap <c-space>
+" nnoremap <c-space>
 inoremap <silent><expr> <c-space> coc#refresh()
 " }}}
 " }}}
