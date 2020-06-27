@@ -163,14 +163,36 @@ let test#strategy = "neovim"
 " Setup Syntastic
 let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
 " ================ Setup CoC ================== {{{
+let g:coc_global_extensions = [
+      \ 'coc-css',
+      \ 'coc-cssmodules',
+      \ 'coc-emmet',
+      \ 'coc-eslint',
+      \ 'coc-go',
+      \ 'coc-highlight',
+      \ 'coc-html',
+      \ 'coc-json',
+      \ 'coc-markdownlint',
+      \ 'coc-phpls',
+      \ 'coc-solargraph',
+      \ 'coc-svg',
+      \ 'coc-tabnine',
+      \ 'coc-tsserver',
+      \ 'coc-xml',
+      \ 'coc-yaml'
+      \ ]
 " jsonc comment highlighting
 autocmd FileType json syntax match Comment +\/\/.\+$+
 " FileType mappings
 let g:coc_filetype_map = {
       \ 'html.swig': 'html',
+      \ 'json.dist': 'json',
+      \ 'neon.dist': 'yaml',
       \ 'wxss': 'css',
       \ 'xml.dist': 'xml',
+      \ 'yml.dist': 'yaml',
       \ }
+
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
   let col = col('.') - 1
