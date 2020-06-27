@@ -44,7 +44,16 @@ function setup() {
 		echo 'neovim config installed'
 	fi
 	
-	# Install vim-plug
+	# Install Neovim CoC settings
+	if [ ! -f "$nvim_config_dir/coc-settings.json" ] || [ "coc-settings.json" -nt "$nvim_config_dir/coc-settings.json" ]; then
+		# create neovim config directory if it doesn't exist
+		mkdir -p $nvim_config_dir
+		# Install CoC settings file
+		echo 'installing Neovim CoC settings'
+		cp "coc-settings.json" $nvim_config_dir
+		echo 'Neovim CoC settings installed'
+	fi
+		# Install vim-plug
 	# vim-plug download url
 	vimplug_url="https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
 	# vim-plug file name

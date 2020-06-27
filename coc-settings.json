@@ -1,0 +1,7 @@
+{
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "coc.preferences.formatOnType": true,
+  "coc.preferences.formatOnSaveFiletypes": ["go", "markdown", "javascript", "typescript", "json", "jsonc"],
+  "coc.source.file.ignoreHidden": false,
+  "codeLens.enable": true
+}
