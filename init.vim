@@ -209,6 +209,8 @@ inoremap <silent><expr> <c-space> coc#refresh()
 " }}}
 " }}}
 " ================ Custom mappings ======================== {{{
+set clipboard+=unnamedplus
+
 " " Copy to clipboard
 vnoremap  <leader>y  "+y
 nnoremap  <leader>Y  "+yg_
