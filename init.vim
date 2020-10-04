@@ -35,7 +35,7 @@ Plug 'vim-syntastic/syntastic'
 " Language Support Plugins {{{
 "Plug 'Shougo/deoplete.nvim'
 "Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh', }
-Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "}}}
 " PHP Support Plugins {{{
 Plug 'StanAngeloff/php.vim'
