@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 function setup() {
+
 	# Neovim configuration directory
 	nvim_config_dir="$HOME/.config/nvim"
 	# Neovim local user files directory
@@ -15,6 +16,7 @@ function setup() {
 	font_file="Sauce Code Pro Nerd Font Complete Mono.ttf"
 	# local fonts directory
 	font_dir="$HOME/.local/share/fonts"
+
 	if [ ! -f "$font_dir/$font_file" ]; then
 		# create local fonts directory if it doesn't exist
 		mkdir -p $font_dir
@@ -32,7 +34,6 @@ function setup() {
 		echo 'installing PowerLine Status'
 		pip install --user powerline-status
 	fi
-
 
 	# Install Neovim config
 	if [ ! -f "$nvim_config_dir/init.vim" ] || [ "init.vim" -nt "$nvim_config_dir/init.vim" ]; then
@@ -53,11 +54,13 @@ function setup() {
 		cp "coc-settings.json" $nvim_config_dir
 		echo 'Neovim CoC settings installed'
 	fi
-		# Install vim-plug
+
+	# Install vim-plug
 	# vim-plug download url
 	vimplug_url="https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
 	# vim-plug file name
 	vimplug_file="plug.vim"
+
 	if [ ! -f "$nvim_autoload_dir/$vimplug_file" ]; then
 		echo 'installing vim-plug'
 		curl -# -fLo "$nvim_autoload_dir/$vimplug_file" --create-dirs $vimplug_url
