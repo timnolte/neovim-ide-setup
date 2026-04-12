@@ -11,23 +11,23 @@ function setup() {
 
 	# Install custom fonts
 	# font download url
-	font_url="https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/SourceCodePro/Regular/complete/Sauce%20Code%20Pro%20Nerd%20Font%20Complete%20Mono.ttf"
+	font_url="https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/SourceCodePro/Regular/SauceCodeProNerdFontMono-Regular.ttf"
 	# font file name
-	font_file="Sauce Code Pro Nerd Font Complete Mono.ttf"
+	font_file="Sauce Code Pro Nerd Font Mono.ttf"
 	# local fonts directory
 	font_dir="$HOME/.local/share/fonts"
 
-	if [ ! -f "$font_dir/$font_file" ]; then
+  if [ ! -d "$font_dir" ]; then
 		# create local fonts directory if it doesn't exist
 		mkdir -p $font_dir
-		# begin installing font
-		echo 'installing fonts'
-		# download font
-		curl -# -fLo "$font_dir/$font_file" $font_url
-    # install font/rebuild font cache
-    fc-cache -f
-		echo "Fonts installed to $font_dir"
 	fi
+	# begin installing font
+	echo 'installing fonts'
+	# download font
+	curl -# -fLo "$font_dir/$font_file" $font_url
+	# install font/rebuild font cache
+	fc-cache -f
+	echo "Fonts installed to $font_dir"
 
 	# Install PowerLine Status for VIM
 	if [ ! -d "$HOME/.local/lib/python3.6/site-packages/powerline" ]; then
